@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: development
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,6 +32,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --include=dev
+
+      - name: Verify build dependencies
+        run: npm ls vite typescript
 
       - name: Build
         run: npm run build
