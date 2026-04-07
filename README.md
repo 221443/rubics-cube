@@ -43,6 +43,27 @@ This creates an optimized production build in the `dist` folder.
 npm run preview
 ```
 
+## Deploy to GitHub Pages
+
+This repository is configured to deploy automatically with GitHub Actions.
+
+- Built files in `dist` do not need to be committed.
+- Every push to `main` triggers a build and deployment.
+
+### One-time GitHub setup
+
+1. Open your repository on GitHub.
+2. Go to **Settings** -> **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Push your changes to `main`.
+5. Wait for the **Deploy to GitHub Pages** workflow to finish in the **Actions** tab.
+
+Your site URL will be:
+
+```text
+https://221443.github.io/rubics-cube/
+```
+
 ## Controls
 
 - Drag the cube to orbit the camera.
